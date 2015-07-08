@@ -6,11 +6,8 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -20,15 +17,72 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/main.controller.js"></script>
   </head>
-  <body ng-app="starter">
-
+  <body ng-app='starter', ng-controller='MainCtrl'>
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">My Calc</h1>
       </ion-header-bar>
-      <ion-content>
-      </ion-content>
+        <ion-content>
+          <div class="display">{{ display }}</div>
+          <div class="tabs">
+            <a class="tab-item">Home</a>
+            <a class="tab-item">Favorites</a>
+            <a class="tab-item">Settings</a>
+            </div>
+              <div class="button-bar">
+                 <button class="button button-light" ng-click="nSquare()">x<sup>2</button>
+                 <button class="button button-light" ng-click="fSin()">sin</button>
+                 <button class="button button-light" ng-click="fCos()">cos</button>
+                 <button class="button button-light" ng-click="fTan()">tan</button>
+                </div>
+              <div class="button-bar">
+                <button class="button button-light" ng-click="fSqrt()">√</button>
+                <button class="button button-light" ng-click="fISin()">sin<sup>-1</button>
+                <button class="button button-light" ng-click="fICos()">cos<sup>-1</button>
+                <button class="button button-light" ng-click="fITan()">tan<sup>-1</button>
+              </div>
+              <div class="button-bar">
+                <button class="button button-light" ng-click="nOne()">1</button>
+                <button class="button button-light" ng-click="nTwo()">2</button>
+                <button class="button button-light" ng-click="nThree()">3</button>
+                <button class="button button-light" ng-click="fDiv()">÷</button>
+              </div>
+               <div class="button-bar">
+                 <button class="button button-light" ng-click="nFour()">4</button>
+                 <button class="button button-light" ng-click="nFive()">5</button>
+                 <button class="button button-light" ng-click="nSix()">6</button>
+                 <button class="button button-light" ng-click="fMultiply()">x</button>
+              </div>
+              <div class="button-bar">
+                <button class="button button-light" ng-click="nSeven()">7</button>
+                <button class="button button-light" ng-click="nEight()">8</button>
+                <button class="button button-light" ng-click="nNine()">9</button>
+                <button class="button button-light" ng-click="fAdd()">+</button>
+              </div>
+                <div class="button-bar">
+                <button class="button button-light" ng-click="nZero()">0</button>
+                <button class="button button-light"></button>
+                <button class="button button-light" ng-click="fDecimal()">.</button>
+                <button class="button button-light" ng-click="fSub()">-</button>
+              </div>
+              <div class="button-bar">
+                <button class="button button-light" ng-click="fEqual()">=</button>
+                <button class="button button-light" ng-click="fCLEAR()">CLEAR</button>
+             </div>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+              <div class="bar bar-footer bar-balanced">
+                <div class="title">  © 2015 B. Pafford</div>
+              </div>
+        </ion-content>
     </ion-pane>
   </body>
 </html>
